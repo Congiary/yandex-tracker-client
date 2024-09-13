@@ -1,0 +1,21 @@
+{
+  "name": "yandex-tracker-client",
+  "version": "0.0.3",
+  "description": "",
+  "module": "./dist/index.js",
+  "main": "./cjs/index.js",
+  "scripts": {
+    "build": "npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc -p tsconfig.build.json",
+    "build:cjs": "tsc -p tsconfig.build.cjs.json && echo {\"type\":\"commonjs\"} > cjs/package.json"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Congiary",
+    "url": "https://github.com/Congiary"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.7"
+  }
+}
